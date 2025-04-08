@@ -1,3 +1,4 @@
+import { MemoryRouter } from "react-router";
 import App from "./App";
 import { render, screen } from "@testing-library/react";
 
@@ -6,7 +7,11 @@ describe("Given the App component", () => {
     test("Then it should show 'Monuments - Backoffice' inside a level 1 heading", () => {
       const expectedAppTitle = "Monuments - Backoffice";
 
-      render(<App />);
+      render(
+        <MemoryRouter>
+          <App />
+        </MemoryRouter>,
+      );
 
       const appTitle = screen.queryByRole("heading", {
         name: expectedAppTitle,
