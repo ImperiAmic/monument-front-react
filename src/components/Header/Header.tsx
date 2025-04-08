@@ -16,7 +16,7 @@ const Header: React.FC = () => {
               </a>
             </li>
             <li>
-              <a className="header-navigation__link" href="/add">
+              <a className="header-navigation__link" href="/add-monument">
                 Add Monument
               </a>
             </li>
