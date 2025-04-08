@@ -1,4 +1,5 @@
 import { render, screen } from "@testing-library/react";
+import { MemoryRouter } from "react-router";
 import Header from "./Header";
 
 describe("Given the App component", () => {
@@ -6,7 +7,11 @@ describe("Given the App component", () => {
     test("Then it should show 'Monuments - Backoffice' inside a level 1 heading", () => {
       const expectedAppTitle = "Monuments - Backoffice";
 
-      render(<Header />);
+      render(
+        <MemoryRouter>
+          <Header />
+        </MemoryRouter>,
+      );
 
       const appTitle = screen.queryByRole("heading", {
         name: expectedAppTitle,
@@ -17,7 +22,11 @@ describe("Given the App component", () => {
     });
 
     test("Then it should show a 'Monuments' link and a 'Add monument' link", () => {
-      render(<Header />);
+      render(
+        <MemoryRouter>
+          <Header />
+        </MemoryRouter>,
+      );
 
       const monumentLink = screen.queryByRole("link", {
         name: /monuments/i,

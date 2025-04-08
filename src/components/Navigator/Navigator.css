@@ -1,0 +1,30 @@
+.header-navigation {
+  padding-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  @media (width > 550px) {
+    flex-direction: row;
+  }
+}
+
+.header-navigation__link,
+.active {
+  font-size: 1.5rem;
+
+  &:hover {
+    font-weight: bold;
+    cursor: pointer;
+    border-bottom: 3px solid #fff;
+  }
+}
+
+.active {
+  font-weight: bold;
+  border-bottom: 3px solid #fff;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
