@@ -13,7 +13,7 @@ describe("Given the App component", () => {
         </MemoryRouter>,
       );
 
-      const appTitle = screen.queryByRole("heading", {
+      const appTitle = screen.getByRole("heading", {
         name: expectedAppTitle,
         level: 1,
       });

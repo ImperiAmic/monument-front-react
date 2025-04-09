@@ -11,11 +11,11 @@ describe("Given the Navigator component", () => {
         </MemoryRouter>,
       );
 
-      const monumentLink = screen.queryByRole("link", {
+      const monumentLink = screen.getByRole("link", {
         name: /monuments/i,
       });
 
-      const addLink = screen.queryByRole("link", {
+      const addLink = screen.getByRole("link", {
         name: /add/i,
       });
 
