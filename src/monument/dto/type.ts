@@ -1,11 +1,10 @@
-interface Monument {
+export interface MonumentDto {
   id: string;
   name: string;
   description: string;
   imageUrl: string;
-  imageDescription: string;
   city: string;
   country: string;
 }
 
-export default Monument;
+export default MonumentDto;
