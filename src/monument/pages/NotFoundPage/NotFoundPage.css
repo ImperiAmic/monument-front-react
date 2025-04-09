@@ -1,0 +1,18 @@
+.notfound-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  height: 50vh;
+}
+
+.notfound__number {
+  font-size: 4rem;
+  font-weight: bold;
+}
+
+.notfound__text {
+  font-size: 1.5rem;
+  font-style: italic;
+}
