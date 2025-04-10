@@ -4,9 +4,10 @@ import MonumentDto from "./type";
 const mapMonumentsDtoToMonuments = (
   monumentsDto: MonumentDto[],
 ): Monument[] => {
-  return monumentsDto.map<Monument>(({ ...monumentDto }) => ({
+  return monumentsDto.map<Monument>(({ name, ...monumentDto }) => ({
     ...monumentDto,
-    imageDescription: `General view of ${monumentDto.name}`,
+    name,
+    imageDescription: `General view of ${name}`,
   }));
 };
 

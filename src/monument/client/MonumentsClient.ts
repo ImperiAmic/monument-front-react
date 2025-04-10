@@ -1,4 +1,4 @@
-import mapMonumentsDtoToMonuments from "../dto/mapper";
+import mapMonumentsDtoToMonuments from "../dto/mappers";
 import MonumentDto from "../dto/type";
 import MonumentClientStructure from "./types";
 
