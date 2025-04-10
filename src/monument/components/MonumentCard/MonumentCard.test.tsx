@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react";
-import santaMaria from "../../fixture";
 import MonumentCard from "./MonumentCard";
+import { santaMaria } from "../../fixture";
 
 describe("Given the MonumentCard component", () => {
   describe("When it receives Basílica de Santa María", () => {

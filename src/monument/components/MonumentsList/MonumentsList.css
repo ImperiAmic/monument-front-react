@@ -1,0 +1,24 @@
+.monuments-container {
+  max-width: 1200px;
+  justify-self: center;
+}
+
+.monument-wrapper {
+  background-color: #ccc;
+  padding: 20px 10px;
+  border: 3px solid #000;
+  border-radius: 12px;
+  min-height: 500px;
+}
+
+.monuments {
+  margin: 0 auto;
+  padding: 20px;
+  display: grid;
+  gap: 15px;
+  grid-template-columns: repeat(1, 1fr);
+
+  @media (width > 900px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
