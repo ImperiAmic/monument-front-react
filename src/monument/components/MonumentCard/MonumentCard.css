@@ -1,0 +1,13 @@
+.monument {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.monument__name {
+  font-size: 1.875rem;
+  text-transform: capitalize;
+  align-self: flex-start;
+}
