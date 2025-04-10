@@ -11,7 +11,7 @@ const MonumentsList: React.FC<MonumentsListProps> = ({ monuments }) => {
     <div className="monuments-container">
       <ul className="monuments">
         {monuments.map((monument) => (
-          <li className="monument-wrapper">
+          <li className="monument-wrapper" key={monument.id}>
             <MonumentCard monument={monument} />
           </li>
         ))}
