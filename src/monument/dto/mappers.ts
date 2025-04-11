@@ -1,5 +1,5 @@
 import Monument from "../types";
-import MonumentDto from "./type";
+import MonumentDto from "./types";
 
 const mapMonumentsDtoToMonuments = (
   monumentsDto: MonumentDto[],
