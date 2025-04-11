@@ -12,8 +12,8 @@ export default defineConfig({
     setupFiles: ["./src/setupTest.ts"],
     coverage: {
       provider: "v8",
-      include: ["**/*.tsx"],
-      exclude: ["main.tsx", "**/*.d.ts", "**/*.ts", "router"],
+      include: ["**/*.tsx", "**/*.ts"],
+      exclude: ["main.tsx", "**/*.d.ts", "**/types.ts"],
       reportsDirectory: "../coverage",
     },
   },
