@@ -1,8 +1,13 @@
 import { useState } from "react";
+import { useNavigate } from "react-router";
+import { MonumentData } from "../../types";
 import "./MonumentForm.css";
-import Monument from "../../types";
 
-const MonumentForm: React.FC = () => {
+interface MonumentFormProps {
+  action: (monumentData: MonumentData) => Promise<void>;
+}
+
+const MonumentForm: React.FC<MonumentFormProps> = ({ action }) => {
   const emptyMonumentData = {
     name: "",
     description: "",
@@ -12,7 +17,7 @@ const MonumentForm: React.FC = () => {
   };
 
   const [monumentData, setMonumentData] =
-    useState<Omit<Monument, "id" | "imageDescription">>(emptyMonumentData);
+    useState<MonumentData>(emptyMonumentData);
 
   const editMonumentData = (
     event:
@@ -28,6 +33,18 @@ const MonumentForm: React.FC = () => {
     }));
   };
 
+  const navigate = useNavigate();
+
+  const onSubmitForm = async (
+    event: React.FormEvent<HTMLFormElement>,
+  ): Promise<void> => {
+    event.preventDefault();
+
+    await action(monumentData);
+
+    navigate("/monuments");
+  };
+
   const isFormValid =
     monumentData.name !== "" &&
     monumentData.description !== "" &&
@@ -36,7 +53,7 @@ const MonumentForm: React.FC = () => {
     monumentData.city !== "";
 
   return (
-    <form className="form">
+    <form className="form" onSubmit={onSubmitForm}>
       <div className="form__group">
         <label className="form__label" htmlFor="name">
           Monument Name

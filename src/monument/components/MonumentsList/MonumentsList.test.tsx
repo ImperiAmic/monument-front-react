@@ -1,7 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import { bruc129, ermitaCid, santaMaria } from "../../fixture";
-import Monument from "../../types";
 import MonumentsList from "./MonumentsList";
+import { Monument } from "../../types";
 
 describe("Given the MonumentList function component", () => {
   describe("When it receives Basílica de Santa María, Ermita de la Virgen del Cid and The Refactor Project Headquarters", () => {

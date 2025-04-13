@@ -1,4 +1,4 @@
-import Monument from "./types";
+import { Monument } from "./types";
 
 export const santaMaria: Monument = {
   id: "fff666",

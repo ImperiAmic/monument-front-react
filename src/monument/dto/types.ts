@@ -1,4 +1,4 @@
-import Monument from "../types";
+import { Monument } from "../types";
 
 export type MonumentDto = Omit<Monument, "imageDescription">;
 
