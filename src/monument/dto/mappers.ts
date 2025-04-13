@@ -1,7 +1,7 @@
 import { Monument } from "../types";
 import MonumentDto from "./types";
 
-const mapMonumentsDtoToMonuments = (
+export const mapMonumentsDtoToMonuments = (
   monumentsDto: MonumentDto[],
 ): Monument[] => {
   return monumentsDto.map<Monument>(({ name, ...monumentDto }) => ({
@@ -11,4 +11,13 @@ const mapMonumentsDtoToMonuments = (
   }));
 };
 
-export default mapMonumentsDtoToMonuments;
+export const mapMonumentDtoToMonument = (
+  monumentDto: MonumentDto,
+): Monument => {
+  const monument: Monument = {
+    ...monumentDto,
+    imageDescription: `General view of ${monumentDto.name}`,
+  };
+
+  return monument;
+};
