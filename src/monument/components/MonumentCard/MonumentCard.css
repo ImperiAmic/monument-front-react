@@ -11,3 +11,31 @@
   text-transform: capitalize;
   align-self: flex-start;
 }
+
+.monument__image {
+  border-radius: 12px;
+  aspect-ratio: 1;
+  object-fit: cover;
+}
+
+.monument__details {
+  padding: 0 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.monument__description {
+  font-size: 1.25rem;
+}
+
+.monument__location {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+  gap: 6px;
+}
+
+.monument__location-details {
+  font-style: italic;
+}
