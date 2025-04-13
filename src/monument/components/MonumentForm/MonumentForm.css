@@ -34,3 +34,7 @@
   align-self: center;
   font-size: 1.2rem;
 }
+
+.form__button:disabled {
+  cursor: not-allowed;
+}
