@@ -1,4 +1,4 @@
-interface Monument {
+export type Monument = {
   id: string;
   name: string;
   description: string;
@@ -6,6 +6,6 @@ interface Monument {
   imageDescription: string;
   city: string;
   country: string;
-}
+};
 
-export default Monument;
+export type MonumentData = Omit<Monument, "id" | "imageDescription">;

@@ -1,8 +1,8 @@
 import { PropsWithChildren, useCallback, useMemo, useState } from "react";
 import MonumentsContext from "./MonumentsContext";
 import MonumentsContextStructure from "./types";
-import Monument from "../types";
 import MonumentClient from "../client/MonumentClient";
+import { Monument } from "../types";
 
 const MonumentsContextProvider: React.FC<PropsWithChildren> = ({
   children,

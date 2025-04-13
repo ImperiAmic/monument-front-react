@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./MonumentForm.css";
-import Monument from "../../types";
+import { MonumentData } from "../../types";
 
 const MonumentForm: React.FC = () => {
   const emptyMonumentData = {
@@ -12,7 +12,7 @@ const MonumentForm: React.FC = () => {
   };
 
   const [monumentData, setMonumentData] =
-    useState<Omit<Monument, "id" | "imageDescription">>(emptyMonumentData);
+    useState<MonumentData>(emptyMonumentData);
 
   const editMonumentData = (
     event:

@@ -1,6 +1,6 @@
 import mapMonumentsDtoToMonuments from "../dto/mappers";
 import MonumentDto from "../dto/types";
-import Monument from "../types";
+import { Monument } from "../types";
 import MonumentClientStructure from "./types";
 
 class MonumentClient implements MonumentClientStructure {
