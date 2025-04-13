@@ -1,0 +1,10 @@
+.form-container {
+  padding: 40px 0px;
+  width: 1200px;
+  justify-self: center;
+}
+
+.form__title {
+  font-size: 1.875rem;
+  text-align: left;
+}
