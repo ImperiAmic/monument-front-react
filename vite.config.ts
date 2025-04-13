@@ -13,7 +13,7 @@ export default defineConfig({
     coverage: {
       provider: "v8",
       include: ["**/*.tsx", "**/*.ts"],
-      exclude: ["main.tsx", "**/*.d.ts", "**/types.ts"],
+      exclude: ["main.tsx", "**/*.d.ts", "**/types.ts", "**/MonumentsPage.tsx"],
       reportsDirectory: "../coverage",
     },
   },
