@@ -22,16 +22,16 @@ const MonumentForm: React.FC = () => {
         <input className="form__input" type="url" id="imageUrl" required />
       </div>
       <div className="form__group">
-        <label className="form__label" htmlFor="city">
-          Monument City
-        </label>
-        <input className="form__input" type="text" id="city" required />
-      </div>
-      <div className="form__group">
         <label className="form__label" htmlFor="country">
           Monument Country
         </label>
         <input className="form__input" type="text" id="country" required />
+      </div>
+      <div className="form__group">
+        <label className="form__label" htmlFor="city">
+          Monument City
+        </label>
+        <input className="form__input" type="text" id="city" required />
       </div>
       <button className="form__button" type="submit">
         Submit
