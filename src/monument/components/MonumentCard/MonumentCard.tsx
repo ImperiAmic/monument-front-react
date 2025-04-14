@@ -1,3 +1,4 @@
+import useMonuments from "../../hooks/useMonuments";
 import { Monument } from "../../types";
 import "./MonumentCard.css";
 
@@ -6,9 +7,18 @@ interface MonumentCardProps {
 }
 
 const MonumentCard: React.FC<MonumentCardProps> = ({ monument }) => {
+  const { trashMonument } = useMonuments();
+
   return (
     <article className="monument">
       <h2 className="monument__name">{monument.name}</h2>
+      <button
+        type="button"
+        className="monument__delete"
+        onClick={() => trashMonument(monument.id)}
+      >
+        <img src="/trash.svg" alt="Trash icon" height={24} width={24} />
+      </button>
       <img
         src={monument.imageUrl}
         alt={monument.imageDescription}
