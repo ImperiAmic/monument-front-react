@@ -4,12 +4,19 @@
   flex-direction: column;
   align-items: center;
   gap: 15px;
+  position: relative;
 }
 
 .monument__name {
   font-size: 1.875rem;
   text-transform: capitalize;
   align-self: flex-start;
+}
+
+.monument__delete {
+  position: absolute;
+  right: 6px;
+  top: 4px;
 }
 
 .monument__image {

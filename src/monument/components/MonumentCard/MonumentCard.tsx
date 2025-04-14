@@ -9,6 +9,9 @@ const MonumentCard: React.FC<MonumentCardProps> = ({ monument }) => {
   return (
     <article className="monument">
       <h2 className="monument__name">{monument.name}</h2>
+      <button type="button" className="monument__delete">
+        <img src="/trash.svg" alt="Trash icon" height={24} width={24} />
+      </button>
       <img
         src={monument.imageUrl}
         alt={monument.imageDescription}
